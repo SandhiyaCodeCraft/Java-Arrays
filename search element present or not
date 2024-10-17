@@ -1,0 +1,79 @@
+import java.util.*;
+class searchelement {
+    static void search(int arr[],int n,int k){
+        boolean result = false;
+        for(int e:arr){
+            if(e==k){
+                result=true;
+                break;
+            }
+        }
+        System.out.println("is key found:"+result);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        search(arr,n,k);
+    }
+}
+//binary search
+import java.util.*;
+class searchelement {
+    static void search(int arr[],int n,int k){
+        Arrays.sort(arr);
+        int l = Arrays.binarySearch(arr,k);
+        boolean result = l>=0 ? true : false;
+        System.out.println("is key found:"+result);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        search(arr,n,k);
+    }
+}
+//listcontains method
+import java.util.*;
+class searchelement {
+    static void search(int arr[],int n,int k){
+        boolean result = Arrays.asList(arr).contains(k);
+        System.out.println("is key found:"+result);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        search(arr,n,k);
+    }
+}
+//stream.anymatch method
+import java.util.*;
+class searchelement {
+    static void search(int arr[],int n,int k){
+        boolean result = Arrays.stream(arr).anyMatch(x->x==k);
+        System.out.println("is key found:"+result);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        search(arr,n,k);
+    }
+}
