@@ -1,0 +1,27 @@
+import java.util.*;
+class Solution {
+    public static int[] mergearray(int[] nums1,int[] nums2,int n) {
+        ArrayList<Integer>result = new ArrayList<>();
+        for(int N:nums1){
+            result.add(N);
+        }
+        for(int n1:nums2){
+            result.add(n1);
+        }
+        return result.stream().mapToInt(Integer::intValue).toArray();
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int nums1[]=new int[n];
+        int nums2[]=new int[n];
+        for(int i=0;i<n;i++){
+            nums1[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            nums2[i]=sc.nextInt();
+        }
+        int r[]=mergearray(nums1,nums2,n);
+        System.out.println(Arrays.toString(r));
+    }
+}
