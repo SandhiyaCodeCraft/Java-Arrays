@@ -1,0 +1,28 @@
+import java.util.*;
+class Solution {
+    public static void commonelements(int[] nums1,int[] nums2,int n) {
+        HashSet<Integer>set1 = new HashSet<>();
+        HashSet<Integer>set2 = new HashSet<>();
+        for(int N:nums1){
+            set1.add(N);
+        }
+        for(int n1:nums2){
+            set2.add(n1);
+        }
+        set1.retainAll(set2);
+        System.out.println(set1);
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int nums1[]=new int[n];
+        int nums2[]=new int[n];
+        for(int i=0;i<n;i++){
+            nums1[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            nums2[i]=sc.nextInt();
+        }
+        commonelements(nums1,nums2,n);
+    }
+}
