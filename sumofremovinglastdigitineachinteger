@@ -1,0 +1,28 @@
+import java.util.*;
+class sum {
+    static int sumofremovinglastdigitineachinteger(int arr[], int N){
+        Arrays.sort(arr);
+        int d = arr[0];
+        int c=0;
+        while(d!=0){
+            d=d/10;
+            ++c;
+        }
+        int s=0;
+        int di=(int)Math.pow(10,c-1);
+        for(int i=0;i<arr.length;i++){
+            s+=arr[i]/di;
+        }
+        return s;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int arr[] = new int[N];
+        for(int i=0;i<N;i++){
+            arr[i]=sc.nextInt();
+        }
+        int r = sumofremovinglastdigitineachinteger(arr,N);
+        System.out.println(r);
+    }
+}
