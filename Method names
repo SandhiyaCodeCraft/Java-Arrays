@@ -16,6 +16,4 @@ collections.reverseOrder()
 set1.retainAll(set2)
 Math.min()
 Math.max()
-for arrayList--->.add()
-for arrayList->result.stream().mapToInt(Integer::intValue).toArray();
 Arrays.asList(arr).contains(k);
