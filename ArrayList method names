@@ -1,0 +1,9 @@
+for arrayList--->.add()
+for arrayList->result.stream().mapToInt(Integer::intValue).toArray();
+arrayListvariable.contains(23);//output:true or false
+arrayListvariable.set(index,value);//adding element
+arrayListvariable.remove(index);//removing element
+arrayListvariable.add(sc.nextInt());//getting input element
+arrayListvariable.get(i);//printing element
+
+
