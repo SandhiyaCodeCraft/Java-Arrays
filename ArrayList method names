@@ -1,4 +1,5 @@
 for arrayList--->.add()
+arrayListvariable.size()//length
 for arrayList->result.stream().mapToInt(Integer::intValue).toArray();
 arrayListvariable.contains(23);//output:true or false
 arrayListvariable.set(index,value);//adding element
